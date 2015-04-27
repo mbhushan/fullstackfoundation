@@ -1,7 +1,7 @@
 CRUD Review
 ==============================
 
-# Operations with SQLAlchemy
+## Operations with SQLAlchemy
 
 ```
 In this lesson, we performed all of our CRUD operations with SQLAlchemy on an SQLite database. Before we perform any operations, we must first import the necessary libraries, connect to our restaurantMenu.db, and create a session to interface with the database:
@@ -15,7 +15,7 @@ Base.metadata.bind=engine
 DBSession = sessionmaker(bind = engine)
 session = DBSession()
 
-CREATE
+### CREATE
 We created a new Restaurant and called it Pizza Palace:
 myFirstRestaurant = Restaurant(name = "Pizza Palace")
 session.add(myFirstRestaurant)
@@ -25,7 +25,7 @@ cheesepizza = menuItem(name="Cheese Pizza", description = "Made with all natural
 session.add(cheesepizza)
 session.commit()
 
-READ
+### READ
 We read out information in our database using the query method in SQLAlchemy:
 
 firstResult = sesson.query(Restaurant).first()
@@ -35,7 +35,7 @@ items = session.query(MenuItem).all()
 for item in items:
     print item.name
 
-UPDATE
+### UPDATE
 In order to update and existing entry in our database, we must execute the following commands:
 
 Find Entry
@@ -55,7 +55,8 @@ UrbanVeggieBurger = session.query(MenuItem).filter_by(id=8).one()
 UrbanVeggieBurger.price = '$2.99'
 session.add(UrbanVeggieBurger)
 session.commit() 
-DELETE
+
+### DELETE
 To delete an item from our database we must follow the following steps:
 
 Find the entry
