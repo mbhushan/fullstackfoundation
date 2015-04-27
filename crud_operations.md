@@ -3,7 +3,6 @@ CRUD Review
 
 ## Operations with SQLAlchemy
 
-```
 In this lesson, we performed all of our CRUD operations with SQLAlchemy on an SQLite database. Before we perform any operations, we must first import the necessary libraries, connect to our restaurantMenu.db, and create a session to interface with the database:
 
 from sqlalchemy import create_engine
