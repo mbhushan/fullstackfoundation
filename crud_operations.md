@@ -2,8 +2,10 @@ CRUD Review
 ==============================
 
 ## Operations with SQLAlchemy
-
-In this lesson, we performed all of our CRUD operations with SQLAlchemy on an SQLite database. Before we perform any operations, we must first import the necessary libraries, connect to our restaurantMenu.db, and create a session to interface with the database:
+```
+In this lesson, we performed all of our CRUD operations with SQLAlchemy on an SQLite database. 
+Before we perform any operations, we must first import the necessary libraries, connect to our 
+restaurantMenu.db, and create a session to interface with the database:
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -66,3 +68,4 @@ We deleted spinach Ice Cream from our Menu Items database with the following ope
 spinach = session.query(MenuItem).filter_by(name = 'Spinach Ice Cream').one()
 session.delete(spinach)
 session.commit() 
+```
